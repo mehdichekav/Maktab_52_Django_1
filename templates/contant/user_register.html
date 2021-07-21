@@ -1,0 +1,43 @@
+{% extends "cafe_base.html" %}
+{% block title %}user register{% endblock %}
+{% block css %}
+    <link href="{{ "user.css" }}" rel="stylesheet">
+{% endblock %}
+{% block script %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid pt-1 text-center" style="min-height: 75vh;">
+        <div class="row text-left">
+
+            <div class="modal-content m-auto bg-light" id="user-modal" style="display: block">
+                <h4 style="text-align: center">Register User</h4>
+                <form class="form-group p-3" action="{{ 'user_register' }}" method="post">
+
+                    <label for="first_name">First name</label><br>
+                    <input class="input-group" type="text" id="first_name" required placeholder="first name" name="first_name">
+                    <label for="last_name">Last name</label><br>
+                    <input class="input-group" type="text" id="last_name" required placeholder="last name" name="last_name">
+                    <label for="phone_number">Phone number</label><br>
+                    <input class="input-group" type="tel" id="phone_number" required placeholder="phone number" name="phone_number">
+                    <label for="birthdate">Birthday</label><br>
+                    <input class="input-group" type="date" id="birthdate" required placeholder="birthday" name="birthday">
+                    <label for="email">Email</label><br>
+                    <input class="input-group" type="email" id="email"  required placeholder="email" name="email">
+                    <label for="password">Password</label><br>
+                    <input class="input-group" type="text" id="password"  required placeholder="password" name="password">
+
+
+                    <input class="btn btn-success btn-block  mt-1" type="submit" id="submitaiton" value="register">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

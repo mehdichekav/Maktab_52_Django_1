@@ -1,0 +1,54 @@
+{% extends "cafe_base.html" %}
+{% load static %}
+
+{% block title %}about us{% endblock %}
+{% block css %}
+
+    <link href="{{ "about_us.css" }}" rel="stylesheet">
+{#    <style>#}
+{#        :root {#}
+{#            --background-url: url( 'img/3.jpg' );#}
+{#        }#}
+{#    </style>#}
+{% endblock %}
+{% block content %}
+
+    <div class="container-fluid content">
+
+    <div class="row main-text">
+
+        <h3 style="position: absolute; left: 40px; color: white;margin-top: 15px ">
+           <b> About Us:</b><br/>
+
+
+        </h3>
+        <p style="position: absolute; left: 60px; color: white; margin-top: 65px">
+
+              We start in 2021 spring...<br/>
+                    This cafe is the best in the region.
+
+        </p>
+{#        <form style="position: absolute; left: 40px; color: white; margin-top: 120px ">#}
+{#                <label for="fname">First name:</label>#}
+{#                <input type="text" id="fname" name="fname"><br><br>#}
+{#                <label for="lname">Last name:</label>#}
+{#                <input type="text" id="lname" name="lname"><br><br>#}
+{#                 <input type="submit" value="Submit">#}
+{#            </form>#}
+        <p style="position: absolute; left: 60px; color: white; margin-top: 300px">
+
+              This cafe serves the best coffee and ice cream and a variety of drinks
+                    This cafe is the best in the region.<img src="{% static 'static/img/download.png' %}" alt=""
+                                                             style="width:45px; height:45px">
+
+        </p>
+
+    </div>
+      {% block costom_tag %}
+        <img class="fa-text-width" src="{% static 'static/img/3.jpg' %}" alt="My image" style="width: 100%">
+
+      {% endblock %}
+
+    </div>
+
+{% endblock %}
